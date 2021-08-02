@@ -1,0 +1,26 @@
+﻿@using Newtonsoft.Json
+@model TodoListApp.Controllers.TodoViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Todo</h1>
+
+<form asp-action="EditTodo" asp-controller="TodoList" method="post">
+    <table>
+        <tr>
+            <td>Todo: </td>
+            <td>
+                <input asp-for="Todo" type="text" id="todo" value="@Model.Todo"/>
+                <input type="hidden" asp-for="TodoId" id="todoId" value="@Model.TodoId"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"/></td>
+        </tr>
+    </table>
+    <hr/>
+
+</form>

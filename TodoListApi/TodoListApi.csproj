@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210731060927_InitialCreate.cs" />
+    <Compile Remove="Migrations\20210731060927_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20210731061131_one-many-rel.cs" />
+    <Compile Remove="Migrations\20210731061131_one-many-rel.Designer.cs" />
+    <Compile Remove="Migrations\20210731102640_add-in-whats-removed.cs" />
+    <Compile Remove="Migrations\20210731102640_add-in-whats-removed.Designer.cs" />
+    <Compile Remove="Migrations\20210731115324_full-defined-relationship.cs" />
+    <Compile Remove="Migrations\20210731115324_full-defined-relationship.Designer.cs" />
+    <Compile Remove="Migrations\20210731121142_removed-collection.cs" />
+    <Compile Remove="Migrations\20210731121142_removed-collection.Designer.cs" />
+    <Compile Remove="Migrations\20210801023648_change-data-type.cs" />
+    <Compile Remove="Migrations\20210801023648_change-data-type.Designer.cs" />
+    <Compile Remove="Migrations\20210801024541_change-data-type1.cs" />
+    <Compile Remove="Migrations\20210801024541_change-data-type1.Designer.cs" />
+    <Compile Remove="Migrations\20210801024738_init.cs" />
+    <Compile Remove="Migrations\20210801024738_init.Designer.cs" />
+    <Compile Remove="Migrations\20210801024934_chab=nge-datatype-limit.cs" />
+    <Compile Remove="Migrations\20210801024934_chab=nge-datatype-limit.Designer.cs" />
+    <Compile Remove="Migrations\20210801025214_init.cs" />
+    <Compile Remove="Migrations\20210801025214_init.Designer.cs" />
+    <Compile Remove="Migrations\20210801040600_init.cs" />
+    <Compile Remove="Migrations\20210801040600_init.Designer.cs" />
+    <Compile Remove="Migrations\20210801072824_add-email.cs" />
+    <Compile Remove="Migrations\20210801072824_add-email.Designer.cs" />
+    <Compile Remove="Migrations\20210801073258_email-not-null.cs" />
+    <Compile Remove="Migrations\20210801073258_email-not-null.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,45 @@
+﻿@using Newtonsoft.Json
+@model IEnumerable<TodoListApp.Models.TodoList>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>Todos</p>
+<p>
+    <a asp-action="Create" asp-route-id="@Model.ToList()[0].UserId">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Todo)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (Model != null && Model.ToList()[0].Todo!=null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Todo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new {id=@item.TodoListId}) |
+                    @Html.ActionLink("Delete", "Delete", new { id = @item.TodoListId })
+                </td>
+            </tr>
+        }
+    }
+    
+    </tbody>
+</table>

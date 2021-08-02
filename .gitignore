@@ -3,3 +3,6 @@
 ################################################################################
 
 /TodoListApi/bin/Debug/net5.0
+/TodoListApi/obj
+/TodoListApp/bin/Debug/net5.0
+/TodoListApp/obj
